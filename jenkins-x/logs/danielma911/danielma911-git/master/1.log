@@ -53,34 +53,19 @@ Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfro
 
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-source-danielma911-danielma911-git-mas-htxnv[0m to start...
-
-
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-danielma911-danielma911-git-mas-htxnv[0m
 {"level":"warn","ts":1567154395.6818953,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1567154397.7583232,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/danielma911/danielma911-git.git @ v0.0.1 in path /workspace/source"}
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-merge[0m to start...
-
 
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:cd2bbe94b50f74119e92ac71867ebde39c863366
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-setup-jx-git-credentials[0m to start...
-
-
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-make-build[0m to start...
-
-
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
 CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/danielma911-git main.go
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-container-build[0m to start...
-
 
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] No base image, nothing to extract            
@@ -102,21 +87,12 @@ Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfro
 2019/08/30 08:40:04 pushed blob: sha256:1dfc5fa4cdfee04a7cac8bc1a1f6ba3150a1089d81f9eab668028f09016afedd
 2019/08/30 08:40:04 10.102.174.36:5000/danielma911/danielma911-git:0.0.1: digest: sha256:68c1e460d8e42221c03da759bb1f10e5bc48f461941f0bb8222e6567d5b87ee1 size: 428
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-post-build[0m to start...
-
-
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-changelog[0m to start...
-
 
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/danielma911-git to an unshallow repository
 no previous commit version found so change diff unavailable
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-helm-release[0m to start...
-
 
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
@@ -127,9 +103,6 @@ Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Uploading chart file danielma911-git-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-jx-promote[0m to start...
-
 
 Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
