@@ -1,0 +1,140 @@
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-hhls5[0m
+{"level":"warn","ts":1567154322.9586058,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567154322.9588866,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-ztvsn[0m
+{"level":"warn","ts":1567154336.8430388,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567154336.851715,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-danielma911-danielma911-gi-m9dd9[0m
+{"level":"warn","ts":1567154351.6108098,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567154354.2620654,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/danielma911/danielma911-git.git @ cd2bbe94b50f74119e92ac71867ebde39c863366 in path /workspace/source"}
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cd2bbe94b50f74119e92ac71867ebde39c863366
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/danielma911-git/Chart.yaml to 0.0.1
+Updating repository in charts/danielma911-git/values.yaml to 10.102.174.36:5000/danielma911/danielma911-git
+Updating tag in charts/danielma911-git/values.yaml to 0.0.1
+Tag v0.0.1 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for danielma911-danielma911-git-master-1
+Applying changes 
+upserted PipelineResource danielma911-danielma911-git-mas for the git repository https://github.com/danielma911/danielma911-git.git
+upserted Task danielma911-danielma911-git-mas-from-build-pack-1
+upserted Pipeline danielma911-danielma911-git-mas-1
+created PipelineRun danielma911-danielma911-git-mas-1
+created PipelineStructure danielma911-danielma911-git-mas-1
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wl6d9[0m
+{"level":"warn","ts":1567154371.8705833,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567154371.8708744,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rrmdg[0m
+{"level":"warn","ts":1567154372.561766,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567154372.5628195,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/danielma911-git\""}
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-source-danielma911-danielma911-git-mas-htxnv[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-danielma911-danielma911-git-mas-htxnv[0m
+{"level":"warn","ts":1567154395.6818953,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567154397.7583232,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/danielma911/danielma911-git.git @ v0.0.1 in path /workspace/source"}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-merge[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cd2bbe94b50f74119e92ac71867ebde39c863366
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-setup-jx-git-credentials[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-make-build[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/danielma911-git main.go
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-container-build[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/danielma911-git"]              
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/08/30 08:40:04 pushed blob: sha256:041498fc9a83ce1bb21a87e6c6064c68288820eebf4688242ddbc9ac95393238
+2019/08/30 08:40:04 pushed blob: sha256:1dfc5fa4cdfee04a7cac8bc1a1f6ba3150a1089d81f9eab668028f09016afedd
+2019/08/30 08:40:04 10.102.174.36:5000/danielma911/danielma911-git:0.0.1: digest: sha256:68c1e460d8e42221c03da759bb1f10e5bc48f461941f0bb8222e6567d5b87ee1 size: 428
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-post-build[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-changelog[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/danielma911-git to an unshallow repository
+no previous commit version found so change diff unavailable
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-helm-release[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file danielma911-git-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-jx-promote[0m to start...
+
+
+Showing logs for build [32mmeta-danielma911-danielma911-gi-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app danielma911-git version 0.0.1 to namespace **-staging
+WARNING: Waiting for the fork of ************************/environment-snoutzest-staging to appear...
+error: pulling environment repo https://github.com/danielma911/environment-snoutzest-staging.git into /builder/home/.**/environments: failed to fork GitHub repo danielma911/environment-snoutzest-staging to user ************************: gave up waiting for Repository ************************/environment-snoutzest-staging to appear: GET https://api.github.com/repos/************************/environment-snoutzest-staging: 404 Not Found []
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
